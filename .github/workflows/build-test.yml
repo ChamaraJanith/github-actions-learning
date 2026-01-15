@@ -1,5 +1,5 @@
 name: Build and Test
-#v4 changes: updated actions versions, added caching for npm, improved coverage upload
+
 on:
   push:
     branches: [main, develop]
@@ -36,7 +36,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: './sample-app/package-lock.json'
+          # Path eka thama godak welawata aula yanne. 
+          # ./ nathiwa kelinma folder name eken dila balamu.
+          cache-dependency-path: sample-app/package-lock.json
       
       - name: Install dependencies
         working-directory: ./sample-app
@@ -84,7 +86,7 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: './sample-app/package-lock.json'
+          cache-dependency-path: sample-app/package-lock.json
       
       - working-directory: ./sample-app
         run: npm ci
