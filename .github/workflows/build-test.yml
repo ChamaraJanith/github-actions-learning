@@ -107,3 +107,4 @@ jobs:
           echo "🎯 Test Run Summary"
           echo "==================="
           echo "✅ All tests completed"
+#additional details can be added here based on test results
