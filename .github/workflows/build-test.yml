@@ -1,5 +1,5 @@
 name: Build and Test
-
+#v4 changes: updated actions versions, added caching for npm, improved coverage upload
 on:
   push:
     branches: [main, develop]
